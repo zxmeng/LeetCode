@@ -1,0 +1,37 @@
+LeetCode Notes:
+
+****************** Bit Manipulation ******************
+
+XOR: associative, cummulative, a^a = 0, a^0 = a
+a ^ b = c，而a ^ b ^ b = a, 则 c ^ b = a, c ^ a = b
+
+A & (-A): the lowest bit '1'
+n = n & (n-1): to clear the least significant bit
+
+list copy: b = a[:]
+
+<< >> is faster than & | ^
+
+create set: set([el>>2 for el in nums]) is much slower than {el>>2 for el in nums}
+
+******************       Tree       ******************
+
+BFS:
+collections.deque()
+
+"if root is None" is faster than "if not root"
+passing parms is faster than access to global var
+Height of a tree is the length of the path from root of that tree to its farthest node (i.e. leaf node farthest from the root)
+
+Binary Search Tree, Height-Balanced Tree
+
+list [] is empty but not 'None'
+
+快慢指针：
+mid = head
+fast = head
+while fast and fast.next:
+    mid = mid.next
+    fast = fast.next.next
+
+iteratively is faster than recursively
