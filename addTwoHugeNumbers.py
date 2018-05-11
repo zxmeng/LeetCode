@@ -41,33 +41,31 @@ def addTwoHugeNumbers(a, b):
         a = a.next
         b = b.next
         
-    if a:
-        while a:
-            sum = str(a.value + re)
-            if len(sum) > 4:
-                re = int(sum[:-4])
-                node.value = int(sum[-4:])
-            else:
-                node.value = int(sum)
-                re = 0
-            node.next = ListNode(0)
-            prev = node
-            node = node.next
-            a = a.next
-        
-    elif b:
-        while b:
-            sum = str(b.value + re)
-            if len(sum) > 4:
-                re = int(sum[:-4])
-                node.value = int(sum[-4:])
-            else:
-                node.value = int(sum)
-                re = 0
-            node.next = ListNode(0)
-            prev = node
-            node = node.next
-            b = b.next
+    while a:
+        sum = str(a.value + re)
+        if len(sum) > 4:
+            re = int(sum[:-4])
+            node.value = int(sum[-4:])
+        else:
+            node.value = int(sum)
+            re = 0
+        node.next = ListNode(0)
+        prev = node
+        node = node.next
+        a = a.next
+    
+    while b:
+        sum = str(b.value + re)
+        if len(sum) > 4:
+            re = int(sum[:-4])
+            node.value = int(sum[-4:])
+        else:
+            node.value = int(sum)
+            re = 0
+        node.next = ListNode(0)
+        prev = node
+        node = node.next
+        b = b.next
     
     if re == 0:
         prev.next = None
