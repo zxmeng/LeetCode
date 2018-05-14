@@ -23,22 +23,4 @@ def isSubtree(t1, t2):
 	if not t1:
 		return False
 	
-	nodes = [t1]
-	while nodes:
-		temp = []
-		for node in nodes:
-			if node.value == t2.value:
-				if check(node, t2):
-					return True
-			if node.left:
-				temp.append(node.left)
-			if node.right:
-				temp.append(node.right)
-		nodes = temp
-			
-	return False
-
-
-
-
-
+	return check(t1, t2) or isSubtree(t1.left, t2) or isSubtree(t1.right, t2)
