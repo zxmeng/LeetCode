@@ -29,6 +29,5 @@ def wordBoggle(board, words):
                     if findWord(temp, word[1:], i, j):
                         re.add(word)
                         
-    return sorted(list(re))
+    return sorted(re)
                 
-
