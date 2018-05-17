@@ -13,7 +13,7 @@ def combinationSum(a, sum):
     if not re[sum]:
         return "Empty"
     
-    output = set()
+    output = []
     for com in re[sum]:
-        output.add("(" + " ".join(com) + ")")
+        output += ["(" + " ".join(com) + ")"]
     return "".join(sorted(output))
