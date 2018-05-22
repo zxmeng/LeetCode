@@ -1,3 +1,7 @@
+# last action is buy or sell
+# end with hving stock or no stock
+
+
 def maxProfit(self, prices):
         """
         :type prices: List[int]
