@@ -31,14 +31,11 @@ def searchMatrix(self, matrix, target):
         :rtype: bool
         """
         
-        if not matrix:
+        if not matrix or not matrix[0]:
             return False
         
         m = len(matrix)
         n = len(matrix[0])
-        
-        if n == 0:
-            return False
         
         for i in range(m):
             if target < matrix[i][0]:
@@ -55,5 +52,5 @@ def searchMatrix(self, matrix, target):
                 else:
                     left = mid + 1
                     
-        return False         
+        return False 
         
